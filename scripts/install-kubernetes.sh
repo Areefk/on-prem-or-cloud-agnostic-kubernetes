@@ -13,6 +13,7 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 apt-get update && apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 17.03 | head -1 | awk '{print $3}')
+# sudo apt-get install docker-ce=docker-ce | 5:18.09.1~3-0~ubuntu-xenial docker-ce-cli=docker-ce | 5:18.09.1~3-0~ubuntu-xenial containerd.io
 sudo apt-get update && sudo apt-get install -y \
   containerd.io=1.2.13-2 \
   docker-ce=5:19.03.11~3-0~ubuntu-$(lsb_release -cs) \
